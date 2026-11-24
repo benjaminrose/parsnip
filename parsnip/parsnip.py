@@ -618,6 +618,7 @@ class ParsnipModel(nn.Module):
             photoz_errors = np.array(photoz_errors)
 
         # Add extra features to the input.
+        extra_input_data = []
         if self.settings['input_redshift']:
             if self.settings['predict_redshift']:
                 extra_input_data = [photozs, photoz_errors]
